@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boda de Jorge y Ana</title>
+  <title>Boda de Jorge y Maria</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
@@ -16,8 +16,8 @@
     header {
       background-image: url('https://img.freepik.com/vector-premium/ilustracion-dibujos-animados-pareja-recien-casada-evento-boda-dibujos-animados-plana_82574-11996.jpg');
       background-size: cover;
-      background-position: center;
-      color: white;
+      background-position: down;
+      color: gray;
       padding: 100px 20px;
     }
     h1 {
@@ -41,18 +41,18 @@
 <body>
 
 <header>
-  <h1>Jorge & Ana</h1>
+  <h1>Jorge & Maria</h1>
   <h2>¡Nos casamos!</h2>
 </header>
 
 <section>
-  <h2>1 de Diciembre, 2025</h2>
+  <h2>16 de Octubre, 2025</h2>
   <div class="contador" id="contador"></div>
 </section>
 
 <section>
   <h2>Ubicación</h2>
-  <p>Parroquia San Benito, Monterrey, NL</p>
+  <p>Parroquia San Benito, Guadalupe, NL</p>
   <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
 </section>
 
@@ -63,7 +63,7 @@
 
 <script>
   // Contador regresivo
-  const fechaBoda = new Date("December 1, 2025 15:00:00").getTime();
+  const fechaBoda = new Date("October 16, 2025 15:00:00").getTime();
   const cuenta = setInterval(function() {
     const ahora = new Date().getTime();
     const diferencia = fechaBoda - ahora;
@@ -85,5 +85,6 @@
 
 </body>
 </html>
+
 
 
