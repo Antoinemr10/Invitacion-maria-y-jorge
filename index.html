@@ -3,34 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boda de Jorge y Maria</title>
+  <title>Boda de Jorge y María</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #fefefe;
+      background-color: #ffe6eb; /* 🎨 Fondo rosa pastel */
       color: #333;
       text-align: center;
     }
+
     header {
-      background-image: url('https://png.pngtree.com/png-clipart/20220420/original/pngtree-newlyweds-staring-at-each-other-png-image_7549561.png');
+      background-image: url('https://png.pngtree.com/png-clipart/20220420/original/pngtree-newlyweds-staring-at-each-other-png-image_7549561.png'); /* Puedes quitar esto si no quieres imagen */
       background-size: cover;
       background-position: center;
-      color: black;
+      color: white;
       padding: 100px 20px;
     }
+
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 60px;
       margin-bottom: 0;
     }
+
     h2 {
       font-size: 24px;
     }
+
     section {
       padding: 40px 20px;
     }
+
     .contador {
       font-size: 28px;
       font-weight: bold;
@@ -40,53 +45,47 @@
 </head>
 <body>
 
-<header>
-  <h1>Jorge & Maria</h1>
-  <h2>¡Nos casamos!</h2>
-</header>
+  <header>
+    <h1>Jorge & María</h1>
+    <h2>¡Nos casamos!</h2>
+  </header>
 
-<section>
-  <h2>16 de Octubre, 2025</h2>
-  <div class="contador" id="contador"></div>
-</section>
+  <section>
+    <h2>16 de Octubre, 2025</h2>
+    <div class="contador" id="contador"></div>
+  </section>
 
-<section>
-  <h2>Ubicación</h2>
-  <p>Parroquia San Benito, Guadalupe, NL</p>
-  <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
-</section>
+  <section>
+    <h2>Ubicación</h2>
+    <p>Salon Maria Isabel Eventos, Guadalupe, NL</p>
+    <iframe src="https://www.google.com/maps?rlz=1C1CHBF_esMX1030MX1030&sca_esv=410f324a45823ec5&vet=12ahUKEwi0vq6J0eqOAxVzO0QIHeItPWIQ8UF6BAgbEAM..i&lei=BjyNaLSjJPP2kPIP4tv0kQY&cs=0&um=1&ie=UTF-8&fb=1&gl=mx&sa=X&geocode=KZVYL_jAwWKGMXJ_NWDawbx8&daddr=Presa+del+Infiernillo+MZ15+LT5,+Cerro+de+La+Silla+(U.c.),+67190+Guadalupe,+N.L." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+  </section>
 
-<section>
-  <h2>Confirma tu asistencia</h2>
-  <p><a href="https://forms.gle/..." target="_blank">Haz clic aquí para confirmar</a></p>
-</section>
+  <section>
+    <h2>Confirma tu asistencia</h2>
+    <p><a href="https://forms.gle/..." target="_blank">Haz clic aquí para confirmar</a></p>
+  </section>
 
-<script>
-  // Contador regresivo
-  const fechaBoda = new Date("October 16, 2025 15:00:00").getTime();
-  const cuenta = setInterval(function() {
-    const ahora = new Date().getTime();
-    const diferencia = fechaBoda - ahora;
+  <script>
+    const fechaBoda = new Date("October 16, 2025 15:00:00").getTime();
+    const cuenta = setInterval(function () {
+      const ahora = new Date().getTime();
+      const diferencia = fechaBoda - ahora;
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-    document.getElementById("contador").innerHTML = 
-      `${dias} días ${horas}h ${minutos}m ${segundos}s`;
+      document.getElementById("contador").innerHTML =
+        `${dias} días ${horas}h ${minutos}m ${segundos}s`;
 
-    if (diferencia < 0) {
-      clearInterval(cuenta);
-      document.getElementById("contador").innerHTML = "¡Hoy es el gran día!";
-    }
-  }, 1000);
-</script>
+      if (diferencia < 0) {
+        clearInterval(cuenta);
+        document.getElementById("contador").innerHTML = "¡Hoy es el gran día!";
+      }
+    }, 1000);
+  </script>
 
 </body>
 </html>
-
-
-
-
-
