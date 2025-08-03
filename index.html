@@ -4,90 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invitación Jorge & María</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: url('https://i.pinimg.com/736x/78/3f/06/783f06ca900f060100f0577a56516b8f.jpg') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+      background: #fdf6f0;
       color: #333;
       text-align: center;
+      padding: 20px;
     }
 
-    header {
-      padding: 60px 20px 20px;
-      background-color: rgba(255, 255, 255, 0.7);
+    .invitation-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      padding: 40px 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
 
-    header h1 {
-      font-size: 3em;
-      color: #8B0000; /* rojo vino */
-      margin-bottom: 0.2em;
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      margin: 0;
+      color: #8B0000;
     }
 
-    header p {
-      font-size: 1.3em;
+    .names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.7em;
       color: #444;
+      margin: 20px 0 10px;
     }
 
-    section {
-      padding: 30px 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      margin: 20px auto;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    .phrase {
+      font-size: 1.2em;
+      font-style: italic;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .section {
+      margin: 30px 0;
+    }
+
+    .section h2 {
+      color: #8B0000;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin: 5px 0;
     }
 
     iframe {
-      border: 0;
       width: 100%;
       height: 200px;
+      border: none;
       border-radius: 10px;
+      margin-top: 10px;
     }
 
-    .gift-section, .dresscode-section {
-      background-color: rgba(255, 240, 245, 0.85); /* rosa pastel tenue */
-    }
-
-    footer {
-      padding: 20px;
+    .footer {
+      margin-top: 40px;
       font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>¡Nos casamos!</h1>
-  <p>Jorge & María</p>
-</header>
+  <div class="invitation-container">
+    <h1>¡Nos casamos!</h1>
 
-<section>
-  <h2>Ubicación</h2>
-  <p>Salón María Isabel Eventos, Guadalupe, NL</p>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.1690804010053!2d-100.22983948495593!3d25.667621183692388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1ff3b25377b%3A0x4f250aadcf1a56c0!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses!2smx!4v1690912734402!5m2!1ses!2smx" 
-    allowfullscreen>
-  </iframe>
-</section>
+    <div class="names">Jorge & María</div>
 
-<section class="gift-section">
-  <h2>Mesa de regalos</h2>
-  <p>Tu presencia es nuestro mejor regalo, pero si deseas obsequiarnos algo, aquí te dejamos una opción:</p>
-  <p><strong>Liverpool: 123456789</strong></p>
-</section>
+    <div class="phrase">“El amor verdadero no se encuentra, se construye juntos día a día.”</div>
 
-<section class="dresscode-section">
-  <h2>Código de vestimenta</h2>
-  <p>Formal. Colores claros recomendados para el día.</p>
-</section>
+    <div class="section">
+      <h2>Acompáñanos a celebrar este día tan especial</h2>
+      <p>Sábado 14 de diciembre de 2025</p>
+      <p>Ceremonia: 5:00 PM</p>
+      <p>Recepción: 7:00 PM</p>
+    </div>
 
-<footer>
-  <p>¡Esperamos contar con tu presencia en este día tan especial!</p>
-</footer>
+    <div class="section">
+      <h2>Mesa de regalos</h2>
+      <p>Tu presencia es el regalo más valioso.</p>
+      <p>Pero si deseas tener un detalle con nosotros, puedes encontrarnos en:</p>
+      <p><strong>Liverpool - Mesa No. 123456789</strong></p>
+    </div>
+
+    <div class="section">
+      <h2>Código de vestimenta</h2>
+      <p>Formal elegante</p>
+      <p>Colores claros o neutros recomendados</p>
+    </div>
+
+    <div class="section">
+      <h2>Ubicación</h2>
+      <p>Salón María Isabel Eventos</p>
+      <p>Privada Cerro de las Mitras 500, Contry, Guadalupe, NL</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.1690804010053!2d-100.22983948495593!3d25.667621183692388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1ff3b25377b%3A0x4f250aadcf1a56c0!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses!2smx!4v1690912734402!5m2!1ses!2smx" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="footer">
+      <p>Con mucho amor,</p>
+      <p>Jorge & María</p>
+    </div>
+  </div>
 
 </body>
 </html>
-
-
