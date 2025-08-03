@@ -1,209 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invitación de Boda</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Playfair Display', serif;
-      background: url('https://arteyucatan.com/wp-content/uploads/2024/04/43884-2.webp') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .invitation {
-      background-color: rgba(255, 240, 245, 0.95);
-      max-width: 800px;
-      margin: auto;
-      padding: 40px;
-      text-align: center;
-      position: relative;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-
-    .names {
-      font-family: 'Great Vibes', cursive;
-      font-size: 64px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .image-behind-names {
-      position: absolute;
-      top: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0.2;
-      width: 250px;
-      z-index: 0;
-    }
-
-    .subtitle {
-      font-size: 28px;
-      color: #b30059;
-      margin-top: -10px;
-      font-weight: bold;
-    }
-
-    .quote {
-      font-style: italic;
-      margin: 30px auto;
-      max-width: 600px;
-      font-size: 18px;
-      color: #444;
-    }
-
-    .divider {
-      height: 1px;
-      background-color: #ccc;
-      margin: 30px auto;
-      width: 60%;
-    }
-
-    .date-location {
-      font-size: 22px;
-      color: #5c003f;
-      margin-top: 20px;
-      font-weight: 500;
-    }
-
-    .timer {
-      margin-top: 40px;
-      padding: 20px;
-      border-radius: 12px;
-      background: rgba(255, 224, 235, 0.7);
-      display: inline-block;
-      font-size: 24px;
-      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff8f0;
       color: #333;
     }
 
-    .timer-message {
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: #660033;
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
     }
 
-    .gift-icon {
-      margin-top: 40px;
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      margin: 0;
+      color: #b0846f;
     }
 
-    .gift-icon img {
-      width: 48px;
-      height: 48px;
-      opacity: 0.8;
+    .subtitulo {
+      font-size: 1.8em;
+      color: #d67260;
+      margin: 10px 0 0;
+      font-weight: bold;
     }
 
-    .confirm-btn {
-      margin-top: 30px;
+    .frase {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #666;
     }
 
-    .confirm-btn a {
-      background-color: #b30059;
-      color: white;
-      padding: 12px 20px;
+    .contador {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #f1e0d6;
+    }
+
+    .contador div {
+      text-align: center;
+    }
+
+    .contador span {
+      font-size: 2em;
+      font-weight: bold;
+      color: #b0846f;
+    }
+
+    .contador label {
+      display: block;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .info {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .ubicaciones {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .mapa {
+      max-width: 90%;
+      height: 200px;
+      border: none;
       border-radius: 10px;
-      text-decoration: none;
-      font-size: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    iframe {
-      margin-top: 30px;
+    .direccion {
+      font-size: 0.95em;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .sobre-icono {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: none;
+    }
+
+    .sobre-icono img {
       width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 12px;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    @media (min-width: 768px) {
+      .ubicaciones {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .ubicacion {
+        flex: 1;
+        max-width: 45%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="invitation">
-    <img src="https://w7.pngwing.com/pngs/166/471/png-transparent-wedding-dress-bride-engagement-bride-photography-wedding-people-thumbnail.png" class="image-behind-names" alt="pareja novios">
+  <header>
+    <h1>María & Jorge</h1>
+    <div class="subtitulo">¡Nos casamos!</div>
+    <p class="frase">Dos almas, un destino. Acompáñanos en este día tan especial.</p>
+  </header>
 
-    <div class="subtitle">¡Nos casamos!</div>
-
-    <h1 class="names">Jorge & Maria</h1>
-
-    <div class="quote">
-      "En este camino de 25 años juntos, aprendimos que el amor verdadero se construye con paciencia, respeto y alegría compartida.<br><br>
-      Hoy celebramos no solo nuestro matrimonio, sino todo lo vivido. Y lo hacemos de la mejor manera: con quienes más amamos.<br><br>
-      Gracias por formar parte de esta historia de amor que sigue escribiéndose con esperanza y felicidad."
+  <section class="contador" id="countdown">
+    <div>
+      <span id="dias">00</span>
+      <label>Días</label>
     </div>
-
-    <div class="divider"></div>
-
-    <div class="date-location">
-      16 de octubre a las 8:00 PM<br>
-      María Isabel Eventos, Guadalupe, Nuevo León
+    <div>
+      <span id="horas">00</span>
+      <label>Horas</label>
     </div>
-
-    <div class="timer">
-      <div class="timer-message" id="timerMessage"></div>
-      <span id="days"></span>d :
-      <span id="hours"></span>h :
-      <span id="minutes"></span>m :
-      <span id="seconds"></span>s
+    <div>
+      <span id="minutos">00</span>
+      <label>Minutos</label>
     </div>
-
-    <div class="gift-icon">
-      <img src="https://previews.123rf.com/images/asmati/asmati1606/asmati160604404/58986633-letter-sign-illustration-dark-gray-icon-on-transparent-background.jpg" alt="icono de sobre">
+    <div>
+      <span id="segundos">00</span>
+      <label>Segundos</label>
     </div>
+  </section>
 
-    <div class="confirm-btn">
-      <a href="https://forms.gle/TUFORMULARIO" target="_blank">Confirmar asistencia</a>
+  <section class="info">
+    <div class="ubicaciones">
+      <div class="ubicacion">
+        <h3>Iglesia San Francisco de Asís</h3>
+        <div class="direccion">8a. Avenida y Rincón de La Sierra, 67194 Guadalupe, N.L.<br>🕕 6:00 PM</div>
+        <iframe class="mapa"
+          src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asís,+Guadalupe,+Nuevo+León&output=embed">
+        </iframe>
+      </div>
+      <div class="ubicacion">
+        <h3>Recepción - María Isabel Eventos</h3>
+        <div class="direccion">Guadalupe, Nuevo León</div>
+        <iframe class="mapa"
+          src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed">
+        </iframe>
+      </div>
     </div>
+  </section>
 
-    <iframe 
-      src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
+  <a href="#" class="sobre-icono" title="Confirmar asistencia o regalar sobre">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25647.png" alt="Sobre">
+  </a>
 
   <script>
-    const timerMessage = document.getElementById('timerMessage');
-    const targetDate = new Date("2025-10-16T20:00:00").getTime();
+    const fechaBoda = new Date("2025-12-20T18:00:00").getTime();
 
-    function updateTimer() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+    const actualizarContador = () => {
+      const ahora = new Date().getTime();
+      const distancia = fechaBoda - ahora;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-      document.getElementById('days').innerHTML = days;
-      document.getElementById('hours').innerHTML = hours;
-      document.getElementById('minutes').innerHTML = minutes;
-      document.getElementById('seconds').innerHTML = seconds;
+      document.getElementById("dias").innerText = dias;
+      document.getElementById("horas").innerText = horas;
+      document.getElementById("minutos").innerText = minutos;
+      document.getElementById("segundos").innerText = segundos;
+    };
 
-      let msg = "";
-      if (distance <= 0) {
-        msg = "¡El gran momento ha llegado!";
-      } else if (days === 0 && hours <= 5) {
-        msg = "¡Faltan solo unas horas para celebrar!";
-      } else if (days === 0) {
-        msg = "¡Hoy es el día! ¡Qué emoción!";
-      } else if (days <= 3) {
-        msg = "¡Ya casi! Todo está listo para el gran día.";
-      } else if (days <= 30) {
-        msg = "La cuenta regresiva ha comenzado...";
-      } else if (days <= 60) {
-        msg = "¡Nos acercamos al gran día!";
-      } else {
-        msg = "¡Estamos preparando algo muy especial!";
-      }
-
-      timerMessage.textContent = msg;
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
+    setInterval(actualizarContador, 1000);
   </script>
+
 </body>
 </html>
