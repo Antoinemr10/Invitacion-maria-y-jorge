@@ -1,183 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Invitación de Boda</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación Boda de Plata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: #fce4ec; /* fondo rosa pastel */
-      color: #333;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-      background-image: url('https://i.pinimg.com/474x/48/ce/4e/48ce4e03eb8cfd179dddaa876d41e4c8.jpg');
-      background-size: contain;
-      background-position: center top;
-      background-repeat: no-repeat;
-    }
-
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 64px;
-      color: #880e4f; /* vino */
-      margin: 30px 0 0;
-    }
-
-    .subtitulo {
-      font-size: 32px;
-      color: #ad1457;
-      margin-top: 10px;
-    }
-
-    .frase {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      max-width: 700px;
-      margin: 30px auto;
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    .fecha {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      color: #6a1b9a;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .regalo {
-      text-align: center;
-      font-style: italic;
-      margin: 30px auto;
-      font-size: 18px;
-    }
-
-    .contador {
-      background: #f8bbd0;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 500px;
-      margin: 40px auto;
-      text-align: center;
-      color: #4a148c;
-    }
-
-    .contador h3 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .contador p {
-      font-size: 20px;
-      margin: 10px 0;
-    }
-
-    .asistencia {
-      text-align: center;
-      margin: 50px 0;
-    }
-
-    .asistencia a {
-      background-color: #ad1457;
-      color: #fff;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    iframe {
-      display: block;
-      margin: 40px auto;
-      width: 80%;
-      max-width: 400px;
-      height: 200px;
-      border: 2px solid #ce93d8;
-      border-radius: 10px;
-    }
+    body { margin:0; font-family:'Playfair Display', serif;
+      background:#fce4ec url('TU_IMAGEN_DE_FONDO.jpg') center center fixed;
+      background-size: cover; color:#4a4a4a; }
+    .container { max-width:700px; margin:auto; background:rgba(255,255,255,0.9);
+      padding:30px; border-radius:15px; position:relative; }
+    .novios-img { position:absolute; top:20px; left:50%; transform:translateX(-50%);
+      width:350px; opacity:.1; z-index:0; }
+    h1 { font-family:'Great Vibes', cursive; font-size:60px; color:#a94470;
+      text-align:center; margin:50px 0 0; position:relative; z-index:1; }
+    h2 { text-align:center; font-size:30px; color:#ad1457; margin:10px 0; z-index:1; }
+    .frase { font-style:italic; font-size:18px; max-width:700px; margin:20px auto;
+      text-align:center; line-height:1.6; position:relative; z-index:1; }
+    .frase::before, .frase::after { content:'"'; font-size:30px; vertical-align:top; }
+    .info { text-align:center; font-size:18px; margin:20px 0; position:relative; z-index:1; }
+    .regalos { text-align:center; font-size:16px; font-style:italic; margin:30px 0; z-index:1; }
+    .timer { background:#f8bbd0; border-radius:20px; padding:20px; text-align:center;
+      margin:30px auto; max-width:500px; z-index:1; color:#4a148c; position:relative; }
+    .timer h3 { font-size:22px; margin-bottom:15px; font-family:'Playfair Display', serif; }
+    .timer p { font-size:18px; margin:8px 0; }
+    .asistencia { text-align:center; margin:40px 0; position:relative; z-index:1; }
+    .asistencia a { text-decoration:none; background:#ad1457; color:white;
+      padding:12px 24px; border-radius:8px; font-weight:bold; }
+    .mapa { margin:40px auto 20px; text-align:center; position:relative; z-index:1; }
+    .mapa iframe { width:80%; max-width:400px; height:200px; border:2px solid #ce93d8;
+      border-radius:10px; }
   </style>
 </head>
 <body>
+  <div class="container">
+    <img src="https://w7.pngwing.com/pngs/166/471/png-transparent-wedding-dress-bride-engagement-bride-photography-wedding-people-thumbnail.png"
+      class="novios-img" alt="Pareja sin fondo" />
+    <h1>María & José</h1>
+    <h2>¡Nos casamos!</h2>
+    <div class="frase">
+      Después de 25 años de amor, aprendizaje y crecimiento,<br>
+      seguimos compartiendo un mismo camino, un único corazón.<br>
+      Gracias por ser parte de nuestra historia. ¡Los esperamos con emoción!
+    </div>
 
-<header>
-  <h1>María & José</h1>
-  <div class="subtitulo">¡Nos casamos!</div>
-</header>
+    <div class="info"><strong>16 de octubre de 2025 · 8:00 PM</strong><br>
+      Salón María Isabel Eventos · Guadalupe, Nuevo León
+    </div>
 
-<div class="frase">
-  Han pasado 25 años desde que nuestras almas se unieron en un solo camino.<br>
-  Juntos hemos superado desafíos, celebrado triunfos y construido un hogar lleno de amor.<br>
-  Hoy, queremos renovar nuestros votos rodeados de las personas que más amamos.
-</div>
+    <div class="timer">
+      <h3>Cuenta regresiva</h3>
+      <p id="mensaje-timer">Iniciando...</p>
+      <p id="timer">0 días 0h 0m 0s</p>
+    </div>
 
-<div class="fecha">
-  Los esperamos el <strong>16 de octubre</strong> a las <strong>8:00 PM</strong><br>
-  para celebrar esta boda de plata inolvidable.
-</div>
+    <div class="regalos">
+      Si deseas tener un detalle, puedes traer un sobre o un regalo con cariño.
+    </div>
 
-<div class="regalo">
-  Si deseas obsequiarnos algo, puedes llevar un <strong>sobre o regalo</strong>, lo que nazca de tu corazón.
-</div>
+    <div class="asistencia">
+      <a href="https://forms.gle/tu-link-google-form" target="_blank">Confirmar asistencia</a>
+    </div>
 
-<div class="contador">
-  <h3>¡La cuenta regresiva ha comenzado!</h3>
-  <p id="mensaje-timer"></p>
-  <p id="timer"></p>
-</div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.0361481059413!2d-100.21219078497145!3d25.674000583679252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1a3cc5e79a9%3A0x8322c2bb261105ff!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses-419!2smx!4v1691500000000"
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
 
-<div class="asistencia">
-  <p><strong>Confirma tu asistencia</strong></p>
-  <a href="https://forms.gle/tu-link-aqui" target="_blank">Confirmar en Google Forms</a>
-</div>
+  <script>
+    const fecha = new Date("2025-10-16T20:00:00").getTime();
+    const msg = document.getElementById("mensaje-timer");
+    const timer = document.getElementById("timer");
 
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.0361481059413!2d-100.21219078497145!3d25.674000583679252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1a3cc5e79a9%3A0x8322c2bb261105ff!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses!2smx!4v1691500000000" 
-  allowfullscreen>
-</iframe>
-
-<script>
-  const fechaBoda = new Date("2025-10-16T20:00:00").getTime();
-
-  function actualizarContador() {
-    const ahora = new Date().getTime();
-    const distancia = fechaBoda - ahora;
-
-    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
-    document.getElementById("timer").innerHTML = 
-      dias + " días " + horas + "h " + minutos + "m " + segundos + "s";
-
-    let mensaje = "¡Cada vez falta menos!";
-    if (dias > 60) {
-      mensaje = "¡Comienza la cuenta regresiva!";
-    } else if (dias <= 30 && dias > 7) {
-      mensaje = "Ya casi nos vemos... ¡Qué emoción!";
-    } else if (dias <= 7 && dias > 0) {
-      mensaje = "¡Esta semana es la gran celebración!";
-    } else if (dias === 0) {
-      mensaje = "¡Hoy es el gran día!";
+    function actualizar() {
+      const ahora = Date.now();
+      const diff = fecha - ahora;
+      if (diff <= 0) { msg.textContent="¡Hoy es el gran día!"; timer.textContent="Estamos celebrando"; return; }
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor(diff%86400000/3600000);
+      const m = Math.floor(diff%3600000/60000);
+      const s = Math.floor(diff%60000/1000);
+      timer.textContent = `${d} días ${h}h ${m}m ${s}s`;
+      msg.textContent = d>30? "¡La cuenta regresiva ha comenzado!"
+                      : d>7? "¡Cada día más cerca!"
+                      : d>1? "¡Esta semana es la gran celebración!"
+                      : d===1? "¡Mañana es el día!"
+                      : "¡Hoy celebramos nuestro amor!";
     }
-
-    document.getElementById("mensaje-timer").textContent = mensaje;
-
-    if (distancia < 0) {
-      document.getElementById("timer").innerHTML = "¡Ya estamos celebrando!";
-    }
-  }
-
-  setInterval(actualizarContador, 1000);
-</script>
-
+    setInterval(actualizar,1000); actualizar();
+  </script>
 </body>
 </html>
