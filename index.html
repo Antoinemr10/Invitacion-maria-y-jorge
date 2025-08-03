@@ -122,7 +122,8 @@
 <body>
 
   <div class="invitation">
-   <img src="https://cdn-icons-png.flaticon.com/512/25/25647.png" alt="icono de sobre">
+    <img src="https://w7.pngwing.com/pngs/166/471/png-transparent-wedding-dress-bride-engagement-bride-photography-wedding-people-thumbnail.png" class="image-behind-names" alt="pareja novios">
+
     <div class="subtitle">¡Nos casamos!</div>
 
     <h1 class="names">Jorge & Maria</h1>
@@ -149,30 +150,36 @@
     </div>
 
     <div class="gift-icon">
-      <img src="https://previews.123rf.com/images/asmati/asmati1606/asmati160604404/58986633-letter-sign-illustration-dark-gray-icon-on-transparent-background.jpg" alt="icono de sobre">
+     <img src="https://cdn-icons-png.flaticon.com/512/25/25647.png" alt="icono de sobre">
     </div>
 
     <div class="confirm-btn">
       <a href="https://forms.gle/TUFORMULARIO" target="_blank">Confirmar asistencia</a>
     </div>
-<!-- ... (todo tu código anterior permanece igual hasta antes del primer iframe) ... -->
 
-    <iframe 
-      src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
+  <div style="text-align: center; margin-bottom: 20px;">
+  <p style="font-weight: bold; margin: 5px 0;">Recepción - María Isabel Eventos</p>
+  <p style="margin: 0 0 10px 0;">8:00 PM</p>
+  <iframe 
+    style="width: 300px; height: 300px; border: 0;"
+    src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
 
-    <!-- Segundo mapa: Iglesia San Francisco de Asís -->
-    <iframe
-      style="margin-top: 20px; height: 200px;"
-      src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asís,+Rincón+de+La+Sierra,+Guadalupe,+Nuevo+León&output=embed"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
-
-  <script>
+<!-- Segundo mapa: Iglesia San Francisco de Asís -->
+<div style="text-align: center;">
+  <p style="font-weight: bold; margin: 5px 0;">Ceremonia - Iglesia San Francisco de Asís</p>
+  <p style="margin: 0 0 10px 0;">6:00 PM</p>
+  <iframe 
+    style="width: 300px; height: 300px; border: 0;"
+    src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asís,+Rincón+de+La+Sierra,+Guadalupe,+Nuevo+León&output=embed"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+<script>
     const timerMessage = document.getElementById('timerMessage');
     const targetDate = new Date("2025-10-16T20:00:00").getTime();
 
@@ -215,8 +222,3 @@
   </script>
 </body>
 </html>
-
-   
-
- 
-
