@@ -3,190 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación de Boda</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Invitación Boda</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #fff8f0;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.imgur.com/s6zGkuB.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #4b2e2e;
     }
 
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
+    .invitacion {
+      background-color: rgba(255, 240, 245, 0.92); /* Rosa pastel con transparencia */
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .novios-img {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      z-index: 0;
+      opacity: 0.9;
     }
 
     h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5em;
-      margin: 0;
-      color: #b0846f;
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
     }
 
     .subtitulo {
       font-size: 1.8em;
-      color: #d67260;
-      margin: 10px 0 0;
-      font-weight: bold;
+      color: #c94d7e;
+      text-align: center;
+      margin: 10px 0;
     }
 
     .frase {
-      font-size: 1.2em;
-      margin-top: 10px;
-      color: #666;
+      text-align: center;
+      font-style: italic;
+      margin: 20px 0;
+      font-size: 1.1em;
+      color: #5a4444;
     }
 
     .contador {
+      background-color: #e8d3e0;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 20px;
+      box-shadow: inset 0 0 5px #a87c7c;
+    }
+
+    .detalle-evento {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 1.1em;
+    }
+
+    .iconos {
       display: flex;
       justify-content: center;
       gap: 20px;
-      padding: 30px 0;
-      background-color: #f1e0d6;
+      margin: 20px 0;
     }
 
-    .contador div {
-      text-align: center;
+    .iconos img {
+      width: 40px;
+      height: 40px;
+      opacity: 0.8;
     }
 
-    .contador span {
-      font-size: 2em;
-      font-weight: bold;
-      color: #b0846f;
-    }
-
-    .contador label {
-      display: block;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    .info {
-      text-align: center;
-      padding: 40px 20px 20px;
-    }
-
-    .ubicaciones {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-
-    .mapa {
-      max-width: 90%;
+    iframe {
+      width: 100%;
       height: 200px;
       border: none;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 15px;
     }
 
-    .direccion {
-      font-size: 0.95em;
-      margin: 10px 0;
-      color: #444;
+    .confirmacion {
+      text-align: center;
+      margin-top: 20px;
     }
 
-    .sobre-icono {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;
-      background: none;
+    .confirmacion a {
+      background-color: #c94d7e;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
     }
 
-    .sobre-icono img {
-      width: 100%;
-      height: auto;
-      border-radius: 0;
-      box-shadow: none;
-    }
-
-    @media (min-width: 768px) {
-      .ubicaciones {
-        flex-direction: row;
-        justify-content: center;
-      }
-      .ubicacion {
-        flex: 1;
-        max-width: 45%;
-      }
+    .linea {
+      height: 1px;
+      background-color: #bbb;
+      margin: 30px 0;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>María & Jorge</h1>
+  <div class="invitacion">
+    <img class="novios-img" src="https://w7.pngwing.com/pngs/166/471/png-transparent-wedding-dress-bride-engagement-bride-photography-wedding-people-thumbnail.png" alt="Pareja">
+    
+    <h1>Monica & Bryan</h1>
     <div class="subtitulo">¡Nos casamos!</div>
-    <p class="frase">Dos almas, un destino. Acompáñanos en este día tan especial.</p>
-  </header>
+    <div class="frase">"Una historia de amor escrita con el corazón, celebrada con el alma."</div>
 
-  <section class="contador" id="countdown">
-    <div>
-      <span id="dias">00</span>
-      <label>Días</label>
-    </div>
-    <div>
-      <span id="horas">00</span>
-      <label>Horas</label>
-    </div>
-    <div>
-      <span id="minutos">00</span>
-      <label>Minutos</label>
-    </div>
-    <div>
-      <span id="segundos">00</span>
-      <label>Segundos</label>
-    </div>
-  </section>
+    <div class="contador" id="contador"></div>
 
-  <section class="info">
-    <div class="ubicaciones">
-      <div class="ubicacion">
-        <h3>Iglesia San Francisco de Asís</h3>
-        <div class="direccion">8a. Avenida y Rincón de La Sierra, 67194 Guadalupe, N.L.<br>🕕 6:00 PM</div>
-        <iframe class="mapa"
-          src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asís,+Guadalupe,+Nuevo+León&output=embed">
-        </iframe>
-      </div>
-      <div class="ubicacion">
-        <h3>Recepción - María Isabel Eventos</h3>
-        <div class="direccion">Guadalupe, Nuevo León</div>
-        <iframe class="mapa"
-          src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed">
-        </iframe>
-      </div>
+    <div class="detalle-evento">
+      <strong>📍 Iglesia San Francisco de Asís</strong><br>
+      6:00 PM - 8a. Avenida y Rincón de La Sierra,<br>67194 Guadalupe, Nuevo León
+      <iframe src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asis,+8a.+Avenida+y+Rincón+de+La+Sierra,+67194+Guadalupe,+N.L.&output=embed"></iframe>
+      <br><br>
+      <strong>🎉 Recepción: Maria Isabel Eventos</strong><br>
+      Guadalupe, Nuevo León<br>
+      <strong>Fecha:</strong> 10 de diciembre de 2025
+      <iframe src="https://www.google.com/maps?q=Maria+Isabel+Eventos,+Guadalupe,+Nuevo+Le%C3%B3n&output=embed"></iframe>
     </div>
-  </section>
 
-  <a href="#" class="sobre-icono" title="Confirmar asistencia o regalar sobre">
-    <img src="https://cdn-icons-png.flaticon.com/512/25/25647.png" alt="Sobre">
-  </a>
+    <div class="iconos">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25647.png" alt="Sobre">
+    </div>
+
+    <div class="confirmacion">
+      <p>Confirma tu asistencia</p>
+      <a href="https://forms.gle/tu-formulario-de-confirmacion">Confirmar aquí</a>
+    </div>
+  </div>
 
   <script>
-    const fechaBoda = new Date("2025-12-20T18:00:00").getTime();
+    const fechaBoda = new Date("2025-12-10T18:00:00");
+    const frases = [
+      { tiempo: 60 * 24 * 60 * 60 * 1000, texto: "¡Faltan algunos meses para el gran día!" },
+      { tiempo: 30 * 24 * 60 * 60 * 1000, texto: "¡Ya falta menos de un mes!" },
+      { tiempo: 7 * 24 * 60 * 60 * 1000, texto: "¡Queda solo una semana!" },
+      { tiempo: 24 * 60 * 60 * 1000, texto: "¡Mañana es el gran día!" },
+      { tiempo: 60 * 60 * 1000, texto: "¡En unas horas comienza la boda!" },
+      { tiempo: 0, texto: "¡El momento ha llegado, celebremos juntos!" }
+    ];
 
-    const actualizarContador = () => {
-      const ahora = new Date().getTime();
-      const distancia = fechaBoda - ahora;
+    function actualizarContador() {
+      const ahora = new Date();
+      const diferencia = fechaBoda - ahora;
+      let textoFrase = "";
 
-      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+      for (let i = 0; i < frases.length; i++) {
+        if (diferencia >= frases[i].tiempo) {
+          textoFrase = frases[i].texto;
+          break;
+        }
+      }
 
-      document.getElementById("dias").innerText = dias;
-      document.getElementById("horas").innerText = horas;
-      document.getElementById("minutos").innerText = minutos;
-      document.getElementById("segundos").innerText = segundos;
-    };
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+      const segundos = Math.floor((diferencia / 1000) % 60);
+
+      document.getElementById("contador").innerHTML =
+        `${textoFrase}<br><br>
+        ${dias} días ${horas}h ${minutos}m ${segundos}s`;
+    }
 
     setInterval(actualizarContador, 1000);
   </script>
-
 </body>
 </html>
