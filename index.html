@@ -3,168 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación Jorge & María</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <title>Invitación Boda de Plata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      background: url('https://photos.fife.usercontent.google.com/pw/AP1GczOQnZcxGnUETA43s5OyLBxniVyqxVu9AktGemuGGzN8xpe44HnhbHcROg=w1391-h928-s-no-gm?authuser=0') no-repeat center center fixed;
+      background-color: #fce4ec; /* Rosa pastel */
+      color: #4b2e2e;
+      background-image: url('https://luciasecasa.com/wp-content/uploads/2025/02/colores-para-bodas-2025-iluminacion-mesa-imperial.jpg'); /* Reemplaza con tu foto de fondo */
       background-size: cover;
-      color: #000;
+      background-position: center;
+      background-attachment: fixed;
     }
 
-    .contenido {
-      background-color: rgba(255, 240, 245, 0.9); /* rosa pastel translúcido */
+    .container {
+      max-width: 700px;
+      margin: auto;
       padding: 2rem;
-      margin: 2rem auto;
-      max-width: 800px;
-      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
     }
 
-    h1 {
+    h1.nombres {
       font-family: 'Great Vibes', cursive;
-      font-size: 4rem;
-      text-align: center;
-      margin-bottom: 0;
-      color: #880e4f; /* vino */
+      font-size: 3rem;
+      position: relative;
+      z-index: 1;
     }
 
-    h2 {
+    .novios {
+      position: relative;
       text-align: center;
-      font-size: 1.5rem;
-      color: #4a148c;
-      margin-top: 0.5rem;
+      margin: 50px 0;
+    }
+
+    .fondo-novios {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 160px;
+      opacity: 0.15;
+      transform: translate(-50%, -50%);
+      z-index: 0;
     }
 
     .frase {
-      font-style: italic;
+      font-size: 1.2rem;
       text-align: center;
-      margin: 1.5rem 0;
-      font-size: 1.1rem;
-      color: #444;
+      margin-bottom: 2rem;
     }
 
     .fecha {
-      text-align: center;
-      font-size: 1.4rem;
       font-weight: bold;
-      color: #6a1b9a;
-      margin: 1.5rem 0;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 2rem 0;
     }
 
-    iframe {
+    .mapa {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .mapa iframe {
       width: 100%;
-      height: 250px;
-      border: none;
+      height: 300px;
+      border: 0;
       border-radius: 10px;
     }
 
     .regalos {
       text-align: center;
-      font-size: 1.1rem;
-      margin-top: 2rem;
       font-style: italic;
-      color: #444;
+      margin-top: 1.5rem;
+      font-size: 1rem;
     }
 
     .contador {
       text-align: center;
-      margin-top: 2rem;
-    }
-
-    #timer {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #880e4f;
-    }
-
-    .confirmar {
-      text-align: center;
+      font-size: 1.5rem;
       margin: 2rem 0;
     }
 
-    .confirmar button {
-      background-color: #6a1b9a;
-      color: #fff;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      font-family: 'Playfair Display', serif;
+    .asistencia {
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    .confirmar button:hover {
-      background-color: #4a148c;
+    .asistencia button {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #b71c1c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .asistencia button:hover {
+      background-color: #880e4f;
     }
   </style>
 </head>
 <body>
-  <div class="contenido">
-    <h1>Jorge & María</h1>
-    <h2>¡Nos casamos!</h2>
-    <div class="frase">
-      A lo largo de estos 25 años, el amor, la paciencia y la complicidad nos han guiado.<br />
-      Hoy renovamos ese compromiso con el corazón lleno de gratitud y alegría.<br />
-      Gracias por ser parte de nuestra historia. ¡Los esperamos con mucho cariño!
+  <div class="container">
+    <div class="novios">
+      <img class="fondo-novios" src="https://i.pinimg.com/474x/48/ce/4e/48ce4e03eb8cfd179dddaa876d41e4c8.jpg" alt="Novios decorativo">
+      <h1 class="nombres">Jorge & Mariana</h1>
     </div>
-    <div class="fecha">Martes 16 de octubre, 8:00 PM</div>
+
+    <p class="frase">
+      Han pasado 25 años de amor, complicidad y crecimiento. Un camino lleno de historias que nos han hecho más fuertes.<br><br>
+      Hoy, con el corazón lleno de gratitud, queremos renovar nuestros votos y compartir con ustedes este momento inolvidable.<br><br>
+      ¡Los esperamos con ansias para celebrar nuestra Boda de Plata!
+    </p>
+
+    <p class="fecha">16 de octubre · 8:00 PM</p>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Tu%20Dirección%20Aquí&output=embed" allowfullscreen></iframe>
+    </div>
 
     <div class="regalos">
-      <p>Tu presencia es nuestro mejor regalo.<br/> Si deseas llevar algo, sobre o detalle será bien recibido.</p>
+      Agradecemos de corazón tu compañía.<br>
+      Si deseas tener un detalle con nosotros, puedes traer un sobre o regalo.
     </div>
 
     <div class="contador">
-      <p>Faltan:</p>
-      <div id="timer"></div>
+      <p id="frase-contador"></p>
+      <div id="cuenta"></div>
     </div>
 
-    <div class="confirmar">
-      <p>¿Asistirás a nuestra celebración?</p>
-      <button onclick="alert('¡Gracias por confirmar tu asistencia!')">Confirmar asistencia</button>
+    <div class="asistencia">
+      <p>¿Nos acompañas?</p>
+      <button onclick="confirmarAsistencia()">Confirmar asistencia</button>
     </div>
-
-    <section>
-      <h2>Ubicación</h2>
-      <p style="text-align:center;">Salón María Isabel Eventos, Guadalupe, Nuevo León</p>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1793.296930313167!2d-100.2384479!3d25.6736848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bd6a5f5ecac1%3A0x91dcb38a89ab541!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel!5e0!3m2!1ses!2smx!4v1696263241307"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
-    </section>
   </div>
 
   <script>
+    function confirmarAsistencia() {
+      alert("¡Gracias por confirmar tu asistencia! Nos vemos pronto.");
+    }
+
+    const evento = new Date("2025-10-16T20:00:00").getTime();
+    const frases = [
+      "Faltan pocos días para celebrar el amor.",
+      "Cada segundo nos acerca más al gran día.",
+      "¡La Boda de Plata se acerca con alegría!",
+      "Muy pronto celebraremos 25 años de amor.",
+      "¡El gran día está casi aquí!"
+    ];
+
     function actualizarContador() {
-      const fechaBoda = new Date("2025-10-16T20:00:00");
-      const ahora = new Date();
-      const tiempoRestante = fechaBoda - ahora;
+      const ahora = new Date().getTime();
+      const distancia = evento - ahora;
 
-      const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((tiempoRestante / (1000 * 60 * 60)) % 24);
-      const minutos = Math.floor((tiempoRestante / (1000 * 60)) % 60);
-      const segundos = Math.floor((tiempoRestante / 1000) % 60);
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-      let frase = "";
-      if (dias > 30) frase = "¡La cuenta regresiva ha comenzado!";
-      else if (dias <= 30 && dias > 1) frase = "¡Cada día más cerca!";
-      else if (dias === 1) frase = "¡Mañana es el gran día!";
-      else if (dias === 0) frase = "¡Hoy celebramos el amor!";
-      else frase = "¡Gracias por acompañarnos!";
+      document.getElementById("cuenta").innerHTML =
+        dias + " días " + horas + "h " + minutos + "m " + segundos + "s ";
 
-      document.getElementById("timer").innerHTML = `
-        <p>${dias} días, ${horas} horas, ${minutos} minutos, ${segundos} segundos</p>
-        <p>${frase}</p>
-      `;
+      const fraseRandom = frases[Math.floor(Math.random() * frases.length)];
+      document.getElementById("frase-contador").innerText = fraseRandom;
+
+      if (distancia < 0) {
+        document.getElementById("cuenta").innerHTML = "¡Hoy celebramos juntos!";
+        document.getElementById("frase-contador").innerText = "¡El amor se renueva hoy!";
+      }
     }
 
     setInterval(actualizarContador, 1000);
-    actualizarContador();
   </script>
 </body>
 </html>
-
-
-
