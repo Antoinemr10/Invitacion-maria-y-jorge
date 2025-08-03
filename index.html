@@ -74,7 +74,7 @@
       margin-top: 40px;
       padding: 20px;
       border-radius: 12px;
-      background: rgba(255, 224, 235, 0.7); /* Cambiado aquí */
+      background: rgba(255, 224, 235, 0.7);
       display: inline-block;
       font-size: 24px;
       font-weight: bold;
@@ -87,14 +87,14 @@
       color: #660033;
     }
 
-    .gift-section {
+    .gift-icon {
       margin-top: 40px;
-      font-size: 20px;
-      color: #444;
     }
 
-    .gift-section strong {
-      color: #b30059;
+    .gift-icon img {
+      width: 48px;
+      height: 48px;
+      opacity: 0.8;
     }
 
     .confirm-btn {
@@ -117,17 +117,16 @@
       border: 0;
       border-radius: 12px;
     }
-
   </style>
 </head>
 <body>
 
   <div class="invitation">
     <img src="https://w7.pngwing.com/pngs/166/471/png-transparent-wedding-dress-bride-engagement-bride-photography-wedding-people-thumbnail.png" class="image-behind-names" alt="pareja novios">
-    
+
     <div class="subtitle">¡Nos casamos!</div>
 
-    <h1 class="names">Jorge      &      Maria</h1>
+    <h1 class="names">Jorge & Maria</h1>
 
     <div class="quote">
       "En este camino de 25 años juntos, aprendimos que el amor verdadero se construye con paciencia, respeto y alegría compartida.<br><br>
@@ -150,8 +149,8 @@
       <span id="seconds"></span>s
     </div>
 
-    <div class="gift-section">
-      Si deseas tener un detalle con nosotros, puedes elegir entre un <strong>regalo</strong> o un <strong>sobre</strong>. ¡Lo que nazca del corazón!
+    <div class="gift-icon">
+      <img src="https://previews.123rf.com/images/asmati/asmati1606/asmati160604404/58986633-letter-sign-illustration-dark-gray-icon-on-transparent-background.jpg" alt="icono de sobre">
     </div>
 
     <div class="confirm-btn">
@@ -183,7 +182,6 @@
       document.getElementById('minutes').innerHTML = minutes;
       document.getElementById('seconds').innerHTML = seconds;
 
-      // Frases especiales según el tiempo
       let msg = "";
       if (distance <= 0) {
         msg = "¡El gran momento ha llegado!";
