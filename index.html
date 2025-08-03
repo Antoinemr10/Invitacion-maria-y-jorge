@@ -157,28 +157,34 @@
       <a href="https://forms.gle/TUFORMULARIO" target="_blank">Confirmar asistencia</a>
     </div>
 
-  <div style="text-align: center; margin-bottom: 20px;">
-  <p style="font-weight: bold; margin: 5px 0;">Recepción - María Isabel Eventos</p>
-  <p style="margin: 0 0 10px 0;">8:00 PM</p>
-  <iframe 
-    style="width: 300px; height: 300px; border: 0;"
-    src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
+ <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+
+  <!-- Mapa 1: Recepción -->
+  <div style="text-align: center; width: 300px;">
+    <p style="font-weight: bold; margin: 5px 0;">Recepción - María Isabel Eventos</p>
+    <p style="margin: 0 0 10px 0;">8:00 PM</p>
+    <iframe 
+      style="width: 100%; height: 300px; border: 0;"
+      src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Mapa 2: Ceremonia -->
+  <div style="text-align: center; width: 300px;">
+    <p style="font-weight: bold; margin: 5px 0;">Ceremonia - Iglesia San Francisco de Asís</p>
+    <p style="margin: 0 0 10px 0;">6:00 PM</p>
+    <iframe 
+      style="width: 100%; height: 300px; border: 0;"
+      src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asís,+Rincón+de+La+Sierra,+Guadalupe,+Nuevo+León&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
 </div>
 
-<!-- Segundo mapa: Iglesia San Francisco de Asís -->
-<div style="text-align: center;">
-  <p style="font-weight: bold; margin: 5px 0;">Ceremonia - Iglesia San Francisco de Asís</p>
-  <p style="margin: 0 0 10px 0;">6:00 PM</p>
-  <iframe 
-    style="width: 300px; height: 300px; border: 0;"
-    src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asís,+Rincón+de+La+Sierra,+Guadalupe,+Nuevo+León&output=embed"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
-</div>
 <script>
     const timerMessage = document.getElementById('timerMessage');
     const targetDate = new Date("2025-10-16T20:00:00").getTime();
@@ -222,3 +228,4 @@
   </script>
 </body>
 </html>
+
