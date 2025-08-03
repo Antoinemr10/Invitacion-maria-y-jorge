@@ -1,182 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación Boda de Plata</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitación de Boda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #fce4ec; /* Rosa pastel */
-      color: #4b2e2e;
-      background-image: url('https://luciasecasa.com/wp-content/uploads/2025/02/colores-para-bodas-2025-iluminacion-mesa-imperial.jpg'); /* Reemplaza con tu foto de fondo */
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      font-family: 'Open Sans', sans-serif;
+      background: #fce4ec; /* fondo rosa pastel */
+      color: #333;
     }
 
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.85);
-      border-radius: 15px;
-    }
-
-    h1.nombres {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .novios {
-      position: relative;
+    header {
       text-align: center;
-      margin: 50px 0;
+      padding: 60px 20px 20px;
+      background-image: url('https://i.pinimg.com/474x/48/ce/4e/48ce4e03eb8cfd179dddaa876d41e4c8.jpg');
+      background-size: contain;
+      background-position: center top;
+      background-repeat: no-repeat;
     }
 
-    .fondo-novios {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 160px;
-      opacity: 0.15;
-      transform: translate(-50%, -50%);
-      z-index: 0;
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+      color: #880e4f; /* vino */
+      margin: 30px 0 0;
+    }
+
+    .subtitulo {
+      font-size: 32px;
+      color: #ad1457;
+      margin-top: 10px;
     }
 
     .frase {
-      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      max-width: 700px;
+      margin: 30px auto;
       text-align: center;
-      margin-bottom: 2rem;
+      line-height: 1.6;
     }
 
     .fecha {
-      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #6a1b9a;
       text-align: center;
-      font-size: 1.2rem;
-      margin: 2rem 0;
+      margin-bottom: 40px;
     }
 
-    .mapa {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .mapa iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 10px;
-    }
-
-    .regalos {
+    .regalo {
       text-align: center;
       font-style: italic;
-      margin-top: 1.5rem;
-      font-size: 1rem;
+      margin: 30px auto;
+      font-size: 18px;
     }
 
     .contador {
+      background: #f8bbd0;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 500px;
+      margin: 40px auto;
       text-align: center;
-      font-size: 1.5rem;
-      margin: 2rem 0;
+      color: #4a148c;
+    }
+
+    .contador h3 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .contador p {
+      font-size: 20px;
+      margin: 10px 0;
     }
 
     .asistencia {
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 50px 0;
     }
 
-    .asistencia button {
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      background-color: #b71c1c;
-      color: white;
-      border: none;
+    .asistencia a {
+      background-color: #ad1457;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
       border-radius: 8px;
-      cursor: pointer;
+      font-weight: bold;
     }
 
-    .asistencia button:hover {
-      background-color: #880e4f;
+    iframe {
+      display: block;
+      margin: 40px auto;
+      width: 80%;
+      max-width: 400px;
+      height: 200px;
+      border: 2px solid #ce93d8;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="novios">
-      <img class="fondo-novios" src="https://i.pinimg.com/474x/48/ce/4e/48ce4e03eb8cfd179dddaa876d41e4c8.jpg" alt="Novios decorativo">
-      <h1 class="nombres">Jorge & Mariana</h1>
-    </div>
 
-    <p class="frase">
-      Han pasado 25 años de amor, complicidad y crecimiento. Un camino lleno de historias que nos han hecho más fuertes.<br><br>
-      Hoy, con el corazón lleno de gratitud, queremos renovar nuestros votos y compartir con ustedes este momento inolvidable.<br><br>
-      ¡Los esperamos con ansias para celebrar nuestra Boda de Plata!
-    </p>
+<header>
+  <h1>María & José</h1>
+  <div class="subtitulo">¡Nos casamos!</div>
+</header>
 
-    <p class="fecha">16 de octubre · 8:00 PM</p>
+<div class="frase">
+  Han pasado 25 años desde que nuestras almas se unieron en un solo camino.<br>
+  Juntos hemos superado desafíos, celebrado triunfos y construido un hogar lleno de amor.<br>
+  Hoy, queremos renovar nuestros votos rodeados de las personas que más amamos.
+</div>
 
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps?q=Tu%20Dirección%20Aquí&output=embed" allowfullscreen></iframe>
-    </div>
+<div class="fecha">
+  Los esperamos el <strong>16 de octubre</strong> a las <strong>8:00 PM</strong><br>
+  para celebrar esta boda de plata inolvidable.
+</div>
 
-    <div class="regalos">
-      Agradecemos de corazón tu compañía.<br>
-      Si deseas tener un detalle con nosotros, puedes traer un sobre o regalo.
-    </div>
+<div class="regalo">
+  Si deseas obsequiarnos algo, puedes llevar un <strong>sobre o regalo</strong>, lo que nazca de tu corazón.
+</div>
 
-    <div class="contador">
-      <p id="frase-contador"></p>
-      <div id="cuenta"></div>
-    </div>
+<div class="contador">
+  <h3>¡La cuenta regresiva ha comenzado!</h3>
+  <p id="mensaje-timer"></p>
+  <p id="timer"></p>
+</div>
 
-    <div class="asistencia">
-      <p>¿Nos acompañas?</p>
-      <button onclick="confirmarAsistencia()">Confirmar asistencia</button>
-    </div>
-  </div>
+<div class="asistencia">
+  <p><strong>Confirma tu asistencia</strong></p>
+  <a href="https://forms.gle/tu-link-aqui" target="_blank">Confirmar en Google Forms</a>
+</div>
 
-  <script>
-    function confirmarAsistencia() {
-      alert("¡Gracias por confirmar tu asistencia! Nos vemos pronto.");
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.0361481059413!2d-100.21219078497145!3d25.674000583679252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1a3cc5e79a9%3A0x8322c2bb261105ff!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses!2smx!4v1691500000000" 
+  allowfullscreen>
+</iframe>
+
+<script>
+  const fechaBoda = new Date("2025-10-16T20:00:00").getTime();
+
+  function actualizarContador() {
+    const ahora = new Date().getTime();
+    const distancia = fechaBoda - ahora;
+
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML = 
+      dias + " días " + horas + "h " + minutos + "m " + segundos + "s";
+
+    let mensaje = "¡Cada vez falta menos!";
+    if (dias > 60) {
+      mensaje = "¡Comienza la cuenta regresiva!";
+    } else if (dias <= 30 && dias > 7) {
+      mensaje = "Ya casi nos vemos... ¡Qué emoción!";
+    } else if (dias <= 7 && dias > 0) {
+      mensaje = "¡Esta semana es la gran celebración!";
+    } else if (dias === 0) {
+      mensaje = "¡Hoy es el gran día!";
     }
 
-    const evento = new Date("2025-10-16T20:00:00").getTime();
-    const frases = [
-      "Faltan pocos días para celebrar el amor.",
-      "Cada segundo nos acerca más al gran día.",
-      "¡La Boda de Plata se acerca con alegría!",
-      "Muy pronto celebraremos 25 años de amor.",
-      "¡El gran día está casi aquí!"
-    ];
+    document.getElementById("mensaje-timer").textContent = mensaje;
 
-    function actualizarContador() {
-      const ahora = new Date().getTime();
-      const distancia = evento - ahora;
-
-      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
-      document.getElementById("cuenta").innerHTML =
-        dias + " días " + horas + "h " + minutos + "m " + segundos + "s ";
-
-      const fraseRandom = frases[Math.floor(Math.random() * frases.length)];
-      document.getElementById("frase-contador").innerText = fraseRandom;
-
-      if (distancia < 0) {
-        document.getElementById("cuenta").innerHTML = "¡Hoy celebramos juntos!";
-        document.getElementById("frase-contador").innerText = "¡El amor se renueva hoy!";
-      }
+    if (distancia < 0) {
+      document.getElementById("timer").innerHTML = "¡Ya estamos celebrando!";
     }
+  }
 
-    setInterval(actualizarContador, 1000);
-  </script>
+  setInterval(actualizarContador, 1000);
+</script>
+
 </body>
 </html>
