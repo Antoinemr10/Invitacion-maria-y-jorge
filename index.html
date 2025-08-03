@@ -1,114 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boda de Jorge y María</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación Jorge & María</title>
   <style>
     body {
-      background-image: url('https://plus.unsplash.com/premium_photo-1674235766088-80d8410f9523?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9uZG8lMjBkZSUyMGJvZGF8ZW58MHx8MHx8fDA%3D');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      color: #333;
       margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Arial', sans-serif;
+      background: url('fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      text-align: center;
     }
 
     header {
-      background-image: url('https://png.pngtree.com/png-clipart/20220420/original/pngtree-newlyweds-staring-at-each-other-png-image_7549561.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      padding-top: 50px;
-      text-align: center;
+      padding: 60px 20px 20px;
+      background-color: rgba(255, 255, 255, 0.7);
     }
 
-    h1.titulo-principal {
-      color: #1A237E;
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5em;
-      margin: 0;
+    header h1 {
+      font-size: 3em;
+      color: #8B0000; /* rojo vino */
+      margin-bottom: 0.2em;
     }
 
-    h2.subtitulo {
-      color: #7B1B1B;
-      font-size: 1.5em;
-      font-weight: 600;
-      margin: 10px 0 30px;
+    header p {
+      font-size: 1.3em;
+      color: #444;
     }
 
     section {
-      padding: 40px 20px;
-      text-align: center;
+      padding: 30px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    h2 {
-      font-size: 24px;
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
     }
 
-    .contador {
-      font-size: 28px;
-      font-weight: bold;
-      margin-top: 20px;
+    .gift-section, .dresscode-section {
+      background-color: rgba(255, 240, 245, 0.85); /* rosa pastel tenue */
     }
 
-    a {
-      color: #7B1B1B;
-      text-decoration: none;
-      font-weight: bold;
+    footer {
+      padding: 20px;
+      font-size: 0.9em;
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1 class="titulo-principal">Jorge & María</h1>
-    <h1 class="titulo-principal">¡¡Nos casamos!!</h1>
-    <h2 class="subtitulo">Estás cordialmente invitado a compartir este día con nosotros</h2>
-  </header>
+<header>
+  <h1>¡Nos casamos!</h1>
+  <p>Jorge & María</p>
+</header>
 
-  <section>
-    <h2>16 de Octubre, 2025</h2>
-    <div class="contador" id="contador"></div>
-  </section>
+<section>
+  <h2>Ubicación</h2>
+  <p>Salón María Isabel Eventos, Guadalupe, NL</p>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.1690804010053!2d-100.22983948495593!3d25.667621183692388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1ff3b25377b%3A0x4f250aadcf1a56c0!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses!2smx!4v1690912734402!5m2!1ses!2smx" 
+    allowfullscreen>
+  </iframe>
+</section>
 
-  <section>
-    <h2>Ubicación</h2>
-    <p>Salón María Isabel Eventos, Guadalupe, NL</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.1570638210657!2d-100.2213559!3d25.6829134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866295f6dd9d4305%3A0xaaaaaaaaaaaaaaa!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses-419!2smx!4v1722534988232" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
-  </section>
+<section class="gift-section">
+  <h2>Mesa de regalos</h2>
+  <p>Tu presencia es nuestro mejor regalo, pero si deseas obsequiarnos algo, aquí te dejamos una opción:</p>
+  <p><strong>Liverpool: 123456789</strong></p>
+</section>
 
-  <section>
-    <h2>Confirma tu asistencia</h2>
-    <p><a href="https://forms.gle/..." target="_blank">Haz clic aquí para confirmar</a></p>
-  </section>
+<section class="dresscode-section">
+  <h2>Código de vestimenta</h2>
+  <p>Formal. Colores claros recomendados para el día.</p>
+</section>
 
-  <script>
-    const fechaBoda = new Date("October 16, 2025 15:00:00").getTime();
-    const cuenta = setInterval(function () {
-      const ahora = new Date().getTime();
-      const diferencia = fechaBoda - ahora;
-
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-      document.getElementById("contador").innerHTML =
-        `${dias} días ${horas}h ${minutos}m ${segundos}s`;
-
-      if (diferencia < 0) {
-        clearInterval(cuenta);
-        document.getElementById("contador").innerHTML = "¡Hoy es el gran día!";
-      }
-    }, 1000);
-  </script>
+<footer>
+  <p>¡Esperamos contar con tu presencia en este día tan especial!</p>
+</footer>
 
 </body>
 </html>
