@@ -2,124 +2,78 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación Jorge & María</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boda de Jorge y María</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #fdf6f0;
-      color: #333;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/78/3f/06/783f06ca900f060100f0577a56516b8f.jpg'); /* ← Cambia esta URL por la tuya */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
       text-align: center;
-      padding: 20px;
-    }
-
-    .invitation-container {
-      max-width: 700px;
-      margin: auto;
-      background-color: #fff;
-      padding: 40px 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      backdrop-filter: brightness(0.85);
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.5em;
-      margin: 0;
-      color: #8B0000;
-    }
-
-    .names {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.7em;
-      color: #444;
-      margin: 20px 0 10px;
-    }
-
-    .phrase {
-      font-size: 1.2em;
-      font-style: italic;
-      margin-bottom: 30px;
-      color: #555;
-    }
-
-    .section {
-      margin: 30px 0;
-    }
-
-    .section h2 {
-      color: #8B0000;
-      font-size: 1.5em;
+      font-size: 3.5rem;
       margin-bottom: 10px;
     }
 
-    .section p {
-      font-size: 1em;
-      line-height: 1.6;
-      margin: 5px 0;
+    .contador {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 20px;
     }
 
-    iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-      border-radius: 10px;
+    .frase {
+      font-size: 1.3rem;
       margin-top: 10px;
+      font-style: italic;
+      opacity: 0.9;
     }
 
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
+    .contenido {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: auto;
     }
   </style>
 </head>
 <body>
-
-  <div class="invitation-container">
-    <h1>¡Nos casamos!</h1>
-
-    <div class="names">Jorge & María</div>
-
-    <div class="phrase">“El amor verdadero no se encuentra, se construye juntos día a día.”</div>
-
-    <div class="section">
-      <h2>Acompáñanos a celebrar este día tan especial</h2>
-      <p>Sábado 14 de diciembre de 2025</p>
-      <p>Ceremonia: 5:00 PM</p>
-      <p>Recepción: 7:00 PM</p>
-    </div>
-
-    <div class="section">
-      <h2>Mesa de regalos</h2>
-      <p>Tu presencia es el regalo más valioso.</p>
-      <p>Pero si deseas tener un detalle con nosotros, puedes encontrarnos en:</p>
-      <p><strong>Liverpool - Mesa No. 123456789</strong></p>
-    </div>
-
-    <div class="section">
-      <h2>Código de vestimenta</h2>
-      <p>Formal elegante</p>
-      <p>Colores claros o neutros recomendados</p>
-    </div>
-
-    <div class="section">
-      <h2>Ubicación</h2>
-      <p>Salón María Isabel Eventos</p>
-      <p>Privada Cerro de las Mitras 500, Contry, Guadalupe, NL</p>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.1690804010053!2d-100.22983948495593!3d25.667621183692388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1ff3b25377b%3A0x4f250aadcf1a56c0!2sSal%C3%B3n%20Mar%C3%ADa%20Isabel%20Eventos!5e0!3m2!1ses!2smx!4v1690912734402!5m2!1ses!2smx" 
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <div class="footer">
-      <p>Con mucho amor,</p>
-      <p>Jorge & María</p>
-    </div>
+  <div class="contenido">
+    <h1>Jorge & María</h1>
+    <p class="frase">¡Cada día más cerca del gran día!</p>
+    <div class="contador" id="contador"></div>
   </div>
 
+  <script>
+    // Cambia esta fecha por el día de tu boda (AAAA-MM-DD)
+    const fechaBoda = new Date("2025-12-20");
+    
+    function actualizarContador() {
+      const hoy = new Date();
+      const diferencia = fechaBoda - hoy;
+      const dias = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
+      document.getElementById("contador").textContent = 
+        dias > 0 ? `${dias} días para nuestra boda` :
+        dias === 0 ? "¡Hoy es el gran día!" :
+        "¡Ya estamos casados!";
+    }
+
+    actualizarContador();
+    setInterval(actualizarContador, 1000 * 60 * 60); // Actualiza cada hora
+  </script>
 </body>
 </html>
