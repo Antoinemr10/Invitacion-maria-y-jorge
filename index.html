@@ -2,78 +2,135 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boda de Jorge y María</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación de Boda</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-image: url('https://i.pinimg.com/736x/78/3f/06/783f06ca900f060100f0577a56516b8f.jpg'); /* ← Cambia esta URL por la tuya */
+      font-family: 'Georgia', serif;
+      background: url('https://i.pinimg.com/736x/78/3f/06/783f06ca900f060100f0577a56516b8f.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #fff;
+      color: #3a3a3a;
       text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      backdrop-filter: brightness(0.85);
     }
-
+    header {
+      padding: 80px 20px 40px;
+      background-color: rgba(255, 255, 255, 0.85);
+    }
     h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
+      font-size: 48px;
       margin-bottom: 10px;
+      color: #4b2c31;
     }
-
+    h2 {
+      font-size: 24px;
+      color: #4b2c31;
+      margin-top: 0;
+    }
+    .frase {
+      font-style: italic;
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+    }
+    iframe {
+      border-radius: 12px;
+    }
     .contador {
-      font-size: 2rem;
+      font-size: 24px;
       font-weight: bold;
       margin-top: 20px;
+      color: #8b0000;
     }
-
-    .frase {
-      font-size: 1.3rem;
+    #mensajeContador {
+      font-size: 18px;
       margin-top: 10px;
-      font-style: italic;
-      opacity: 0.9;
+      color: #4b2c31;
     }
-
-    .contenido {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 20px;
-      max-width: 600px;
-      margin: auto;
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      background-color: #4b2c31;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .regalos {
+      text-align: left;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <div class="contenido">
-    <h1>Jorge & María</h1>
-    <p class="frase">¡Cada día más cerca del gran día!</p>
+  <header>
+    <h1>María & Jorge</h1>
+    <h2 style="color: #8b0000;">¡Nos casamos!</h2>
+    <p class="frase">"Dos almas, un solo corazón. Acompáñanos a celebrar el amor."</p>
+  </header>
+
+  <section class="regalos">
+    <h2>Sobre los regalos</h2>
+    <p>Tu presencia es nuestro mejor regalo.</p>
+    <p>Si deseas obsequiarnos algo más, agradecemos efectivo o transferencia.</p>
+    <p>Opcional: <br/>Cuenta BBVA: 0123 4567 8910 1121<br/>Titular: Jorge A. M.</p>
+  </section>
+
+  <section>
+    <h2>Ubicación</h2>
+    <p>Salón María Isabel Eventos, Guadalupe, Nuevo León</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.2303898718053!2d-100.2336452849712!3d25.675378183690565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bcd382c6e7b5%3A0x9a287bd2a98f5bd4!2sSal%C3%B3n%20de%20Eventos%20Maria%20Isabel!5e0!3m2!1ses!2smx!4v1696872188187!5m2!1ses!2smx"
+      width="100%" height="250" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <section>
+    <h2>Confirma tu asistencia</h2>
+    <p>¿Podrás acompañarnos en este día tan especial?</p>
+    <button onclick="window.location.href='https://wa.me/52TU_NUMERO'">Confirmar asistencia</button>
+  </section>
+
+  <section>
+    <h2>Faltan:</h2>
     <div class="contador" id="contador"></div>
-  </div>
+    <div id="mensajeContador"></div>
+  </section>
 
   <script>
-    // Cambia esta fecha por el día de tu boda (AAAA-MM-DD)
-    const fechaBoda = new Date("2025-12-20");
-    
+    const fechaBoda = new Date("2025-11-15T17:00:00").getTime();
+
+    const mensajes = [
+      { dias: 30, mensaje: "¡Ya casi es hora! Solo un mes para el gran día." },
+      { dias: 7, mensaje: "¡Una semana para sellar nuestro amor!" },
+      { dias: 1, mensaje: "¡Mañana comienza nuestra nueva aventura!" },
+      { dias: 0, mensaje: "¡Hoy es el gran día, gracias por acompañarnos!" }
+    ];
+
     function actualizarContador() {
-      const hoy = new Date();
-      const diferencia = fechaBoda - hoy;
-      const dias = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
-      document.getElementById("contador").textContent = 
-        dias > 0 ? `${dias} días para nuestra boda` :
-        dias === 0 ? "¡Hoy es el gran día!" :
-        "¡Ya estamos casados!";
+      const ahora = new Date().getTime();
+      const diferencia = fechaBoda - ahora;
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+      const segundos = Math.floor((diferencia / 1000) % 60);
+
+      document.getElementById("contador").textContent =
+        `${dias} días, ${horas}h ${minutos}m ${segundos}s`;
+
+      const mensaje = mensajes.find(m => m.dias === dias);
+      document.getElementById("mensajeContador").textContent = mensaje ? mensaje.mensaje : "";
     }
 
+    setInterval(actualizarContador, 1000);
     actualizarContador();
-    setInterval(actualizarContador, 1000 * 60 * 60); // Actualiza cada hora
   </script>
 </body>
 </html>
