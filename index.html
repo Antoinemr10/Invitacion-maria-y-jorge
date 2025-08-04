@@ -159,23 +159,33 @@
     <div class="confirm-btn">
       <a href="https://forms.gle/TUFORMULARIO" target="_blank">Confirmar asistencia</a>
     </div>
-<div style="display: flex; justify-content: center; gap: 40px; margin-top: 50px;">
-<!-- Mapas con pin rojo -->
-<div class="maps">
-  <div class="imap">
-    <h2>Ceremonia - Capilla</h2>
-    <iframe
-      src="https://www.google.com/maps?ll=25.641826,-100.200861&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&q=8a.+Avenida+Rinc%C3%B3n+de+La+Sierra+67194+Guadalupe,+N.L."
-      loading="lazy" allowfullscreen></iframe>
-  </div>
-  <div class="imap">
-    <h2>Recepción - María Isabel Eventos</h2>
-    <iframe
-      src="https://www.google.com/maps?ll=25.641826,-100.200861&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&q=8a.+Avenida+Rinc%C3%B3n+de+La+Sierra+67194+Guadalupe,+N.L."
-      loading="lazy" allowfullscreen></iframe>
-  </div>
-</div>
+ <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
 
+  <!-- Mapa 1: Recepción -->
+  <div style="text-align: center; width: 300px;">
+    <p style="font-weight: bold; margin: 5px 0;">Recepción - María Isabel Eventos</p>
+    <p style="margin: 0 0 10px 0;">8:00 PM</p>
+    <iframe 
+      style="width: 100%; height: 300px; border: 0;"
+      src="https://www.google.com/maps?q=María+Isabel+Eventos,+Guadalupe,+Nuevo+León&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Mapa 2: Ceremonia -->
+  <div style="text-align: center; width: 300px;">
+    <p style="font-weight: bold; margin: 5px 0;">Ceremonia - Iglesia San Francisco de Asís</p>
+    <p style="margin: 0 0 10px 0;">6:00 PM</p>
+    <iframe 
+      style="width: 100%; height: 300px; border: 0;"
+      src="https://www.google.com/maps?q=Iglesia+San+Francisco+de+Asís,+Rincón+de+La+Sierra,+Guadalupe,+Nuevo+León&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+</div>
 </div>
 
 <script>
@@ -221,6 +231,7 @@
   </script>
 </body>
 </html>
+
 
 
 
