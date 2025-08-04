@@ -1,154 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación al Evento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Invitación de Boda</title>
+  <link href="https://i.ibb.co/HLfm5RFq/Imagen-de-Whats-App-2025-08-03-a-las-13-31-12-22b6f528.jpg" rel="stylesheet">
   <style>
     body {
-      font-family: 'Playfair Display', serif;
-      background-color: #fff8f9;
-      color: #333;
       margin: 0;
       padding: 0;
+      font-family: 'Playfair Display', serif;
+      background: url('https://i.ibb.co/yFbxWMbq/Imagen-de-Whats-App-2025-08-04-a-las-08-20-10-f4badf95.jpg') no-repeat center center fixed;
+      background-size: 200;
     }
 
-    .header {
+    .invitation {
+      background-color: rgba(255, 240, 245, 0.95);
+      max-width: 800px;
+      margin: auto;
+      padding: 40px;
       text-align: center;
-      padding: 40px 20px 10px;
-      color: #5c003f;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
 
-    .header h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
+    .names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+      position: relative;
+      z-index: 1;
     }
 
-    .header p {
-      font-size: 20px;
-      margin: 6px 0;
+    .image-behind-names {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.2;
+      width: 250px;
+      z-index: 0;
     }
 
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px 0 40px;
+    .subtitle {
+      font-size: 28px;
+      color: #b30059;
+      margin-top: -10px;
+      font-weight: bold;
     }
 
-    .countdown div {
-      text-align: center;
+    .quote {
+      font-style: italic;
+      margin: 30px auto;
+      max-width: 600px;
       font-size: 18px;
-      background-color: #f6e6ec;
-      padding: 15px;
+      color: #444;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: #ccc;
+      margin: 30px auto;
+      width: 60%;
+    }
+
+    .date-location {
+      font-size: 22px;
+      color: #5c003f;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    .timer {
+      margin-top: 40px;
+      padding: 20px;
       border-radius: 12px;
-      min-width: 60px;
-      color: #5c003f;
+      background: rgba(255, 224, 235, 0.7);
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
     }
 
-    .maps-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      padding: 0 20px 40px;
-    }
-
-    .map-box {
-      flex: 1 1 300px;
-      max-width: 500px;
-    }
-
-    .map-box h2 {
-      text-align: center;
-      font-size: 20px;
+    .timer-message {
+      font-size: 16px;
       margin-bottom: 10px;
-      color: #5c003f;
+      color: #660033;
+    }
+
+    .gift-icon {
+      margin-top: 40px;
+    }
+
+    .gift-icon img {
+      width: 48px;
+      height: 48px;
+      opacity: 0.8;
+    }
+
+    .confirm-btn {
+      margin-top: 30px;
+    }
+
+    .confirm-btn a {
+      background-color: #b30059;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
     }
 
     iframe {
+      margin-top: 30px;
       width: 100%;
       height: 300px;
       border: 0;
       border-radius: 12px;
     }
-
-    @media (max-width: 600px) {
-      .countdown {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- ENCABEZADO -->
-  <div class="header">
-    <h1>📅 16 de octubre de 2025 • 8:00 PM</h1>
-    <p>📍 María Isabel Eventos, Guadalupe, N.L.</p>
-    <p>🎩 Código de vestimenta: <strong>Etiqueta (formal)</strong></p>
-  </div>
+  <div class="invitation">
+    <img src="https://w7.pngwing.com/pngs/166/471/png-transparent-wedding-dress-bride-engagement-bride-photography-wedding-people-thumbnail.png" class="image-behind-names" alt="pareja novios">
 
-  <!-- TEMPORIZADOR -->
-  <div class="countdown" id="countdown">
-    <div><span id="days">0</span><br>días</div>
-    <div><span id="hours">0</span><br>horas</div>
-    <div><span id="minutes">0</span><br>min</div>
-    <div><span id="seconds">0</span><br>seg</div>
-  </div>
+    <div class="subtitle">¡Nos casamos!</div>
 
-  <!-- MAPAS -->
-  <div class="maps-container">
+    <h1 class="names">Jorge<br> &<br> Maria</h1>
 
-    <!-- MAPA CAPILLA -->
-    <div class="map-box">
-      <h2>Ceremonia - Capilla</h2>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.174829747437!2d-100.2332514!3d25.6542575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bf90d1262b9b%3A0x7ebc947a4d6ae7f8!2s8a.%20Avenida%20y%2C%20Rinc%C3%B3n%20de%20La%20Sierra%2C%2067194%20Guadalupe%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1693434521386!5m2!1ses-419!2smx" 
-        loading="lazy" 
-        allowfullscreen>
-      </iframe>
+    <div class="quote">
+      "En este camino de 25 años juntos, aprendimos que el amor verdadero se construye con paciencia, respeto y alegría compartida.<br><br>
+      Hoy celebramos no solo nuestro matrimonio, sino todo lo vivido. Y lo hacemos de la mejor manera: con quienes más amamos.<br><br>
+      Gracias por formar parte de esta historia de amor que sigue escribiéndose con esperanza y felicidad."
     </div>
 
-    <!-- MAPA RECEPCIÓN -->
-    <div class="map-box">
-      <h2>Recepción - María Isabel Eventos</h2>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.388246357852!2d-100.2168454!3d25.6467756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c141b7599e91%3A0xe01a41e66b0664cf!2sPresa%20del%20Infiernillo%20MZ15%20LT5%2C%20Cerro%20de%20La%20Silla%20(U.c.)%2C%2067190%20Guadalupe%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1693434521386!5m2!1ses-419!2smx" 
-        loading="lazy" 
-        allowfullscreen>
-      </iframe>
+<div class="date-location" style="font-family:'Playfair Display', serif; font-size:22px; color:#5c003f; margin:20px 0;">
+  📅 16 de octubre de 2025 • 8:00 PM<br>
+  María Isabel Eventos, Guadalupe NL • <strong>Etiqueta (formal)</strong>
     </div>
 
+    <div class="timer">
+      <div class="timer-message" id="timerMessage"></div>
+      <span id="days"></span>d :
+      <span id="hours"></span>h :
+      <span id="minutes"></span>m :
+      <span id="seconds"></span>s
+    </div>
+
+    <div class="gift-icon">
+     <img src="https://cdn-icons-png.flaticon.com/512/25/25647.png" alt="icono de sobre">
+    </div>
+
+    <div class="confirm-btn">
+      <a href="https://forms.gle/TUFORMULARIO" target="_blank">Confirmar asistencia</a>
+    </div>
+
+<!-- MAPAS CON PIN ROJO Y UBICACIONES EXACTAS -->
+<div class="maps" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+  <!-- Capilla -->
+  <div style="flex: 1 1 300px; max-width: 500px;">
+    <h2 style="text-align: center; font-size: 22px; margin-bottom: 10px;">Ceremonia - Capilla</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.174829747437!2d-100.2332514!3d25.6542575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bf90d1262b9b%3A0x7ebc947a4d6ae7f8!2s8a.%20Avenida%20y%2C%20Rinc%C3%B3n%20de%20La%20Sierra%2C%2067194%20Guadalupe%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1693434521386!5m2!1ses-419!2smx"
+      width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+    </iframe>
   </div>
 
-  <!-- SCRIPT DEL TIMER -->
-  <script>
-    const countdown = () => {
-      const eventDate = new Date("October 16, 2025 20:00:00").getTime();
+  <!-- Recepción -->
+  <div style="flex: 1 1 300px; max-width: 500px;">
+    <h2 style="text-align: center; font-size: 22px; margin-bottom: 10px;">Recepción - María Isabel Eventos</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.388246357852!2d-100.2168454!3d25.6467756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c141b7599e91%3A0xe01a41e66b0664cf!2sPresa%20del%20Infiernillo%20MZ15%20LT5%2C%20Cerro%20de%20La%20Silla%20(U.c.)%2C%2067190%20Guadalupe%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1693434521386!5m2!1ses-419!2smx"
+      width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+</div>
+
+<script>
+    const timerMessage = document.getElementById('timerMessage');
+    const targetDate = new Date("2025-10-16T20:00:00").getTime();
+
+    function updateTimer() {
       const now = new Date().getTime();
-      const distance = eventDate - now;
-
-      if (distance <= 0) {
-        document.getElementById("countdown").innerHTML = "<div>¡Ya comenzó el evento!</div>";
-        return;
-      }
+      const distance = targetDate - now;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-    };
+      document.getElementById('days').innerHTML = days;
+      document.getElementById('hours').innerHTML = hours;
+      document.getElementById('minutes').innerHTML = minutes;
+      document.getElementById('seconds').innerHTML = seconds;
 
-    setInterval(countdown, 1000);
+      let msg = "";
+      if (distance <= 0) {
+        msg = "¡El gran momento ha llegado!";
+      } else if (days === 0 && hours <= 5) {
+        msg = "¡Faltan solo unas horas para celebrar!";
+      } else if (days === 0) {
+        msg = "¡Hoy es el día! ¡Qué emoción!";
+      } else if (days <= 3) {
+        msg = "¡Ya casi! Todo está listo para el gran día.";
+      } else if (days <= 30) {
+        msg = "La cuenta regresiva ha comenzado...";
+      } else if (days <= 60) {
+        msg = "¡Nos acercamos al gran día!";
+      } else {
+        msg = "¡Estamos preparando algo muy especial!";
+      }
+
+      timerMessage.textContent = msg;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
   </script>
-
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
